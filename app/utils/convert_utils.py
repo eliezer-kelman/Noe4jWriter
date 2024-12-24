@@ -35,6 +35,3 @@ def convert_event_to_classes(event_json: Dict) -> (Event, Attackers, AttackType,
     )
 
     return country, region, attack_type, target_type, attackers, event
-
-
-

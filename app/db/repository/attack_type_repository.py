@@ -18,6 +18,7 @@ def create_attack_type_if_not_exist(attack_type: AttackType) -> Maybe[dict]:
             "uuid": str(uuid.uuid4()),
             "attack_type": attack_type.attack_type
         }
+
         result = session.run(query, parameters).single()
         if result is None or result.get('a') is None:
             return Maybe.from_value(None).map(lambda _: None)
